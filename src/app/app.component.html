@@ -1,0 +1,168 @@
+<mat-toolbar class="toolbar-fixed" *ngIf="user">
+    <mat-toolbar-row>
+        <div *ngIf="selectedNav =='data-warehouse'">
+            <nav mat-tab-nav-bar>
+
+                <a mat-tab-link [routerLink]="'/data-warehouse/system-integration'" class="ml25"
+                    [routerLinkActive]="['tab-selected']">
+                    System Integration
+                </a>
+
+                <a mat-tab-link [routerLink]="'/data-warehouse/data-capture'" [routerLinkActive]="['tab-selected']">
+                    Data Capture
+                </a>
+
+                <a mat-tab-link [routerLink]="'/table-overview'" [routerLinkActive]="['tab-selected']">
+                    Table Overview
+                </a>
+
+                <a mat-tab-link [routerLink]="'/data-modeling'" [routerLinkActive]="['tab-selected']">
+                    Data Modeling
+                </a>
+                <a mat-tab-link [routerLink]="'/meta-chain'" [routerLinkActive]="['tab-selected']">
+                    Activities
+                </a>
+                <a mat-tab-link [routerLink]="'/create-activity'" [routerLinkActive]="['tab-selected']">
+                    Meta Chain
+                </a>
+            </nav>
+        </div>
+        <span class="spacer"></span>
+        <button mat-icon-button>
+            <mat-icon svgIcon="globe"></mat-icon>
+        </button>
+        <button mat-icon-button>
+            <mat-icon>settings</mat-icon>
+        </button>
+        <button mat-icon-button>
+            <mat-icon>notifications_none</mat-icon>
+        </button>
+        <span class="toolbar-icon"></span>
+        <div class="circles">{{getAvatar()}} </div>
+        <div class="full-name">{{getFullName()}} </div>
+
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="logout()">
+                <mat-icon>power_settings_new</mat-icon>
+                <span>Logout</span>
+            </button>
+            <!-- <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>Check voice mail</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button> -->
+        </mat-menu>
+
+    </mat-toolbar-row>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened class="sidebar-fixed" *ngIf="user">
+        <div>
+            <img src="/assets/image/vpc.svg" class="image-logo">
+        </div>
+        <mat-nav-list>
+            <div class="center-nav-list" [routerLinkActive]="['nav-selected']">
+                <a [routerLink]="'/dashboard'" (click)="setSelectedNav('dashboard')">
+                    <div>
+                        <img src="/assets/image/cottage.svg">
+                        <div class="nav-label">Home</div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="center-nav-list" [routerLinkActive]="['nav-selected']">
+                <a [routerLink]="'/epr'" (click)="setSelectedNav('epr')">
+                    <div>
+                        <img src="/assets/image/epr-icon.svg">
+                        <div class="nav-label">EPR </div>
+                    </div>
+
+                </a>
+            </div>
+            <div class="center-nav-list" [routerLinkActive]="['nav-selected']">
+                <a [routerLink]="'/lca'" (click)="setSelectedNav('lca')">
+                    <div>
+                        <img src="/assets/image/lca-icon.svg">
+                        <div class="nav-label">LCA </div>
+                    </div>
+                </a>
+            </div>
+            <div class="center-nav-list" [routerLinkActive]="['nav-selected']">
+                <a [routerLink]="'/mdg'" (click)="setSelectedNav('mdg')">
+                    <div>
+                        <img src="/assets/image/mdg-icon.svg">
+                        <div class="nav-label">MDG </div>
+                    </div>
+                </a>
+            </div>
+            <div class="center-nav-list" [routerLinkActive]="['nav-selected']">
+                <a [routerLink]="'/carbon'" (click)="setSelectedNav('carbon')">
+
+                    <div>
+                        <img src="/assets/image/carbon-icon.svg">
+                        <div class="nav-label">Carbon </div>
+                    </div>
+                </a>
+            </div>
+            <div class="center-nav-list" [routerLinkActive]="['nav-selected']">
+                <a [routerLink]="'/pef'" (click)="setSelectedNav('pef')">
+                    <div>
+                        <img src="/assets/image/pef-icon.svg">
+                        <div class="nav-label">PEF </div>
+                    </div>
+                </a>
+            </div>
+            <div class="center-nav-list" [routerLinkActive]="['nav-selected']">
+                <a [routerLink]="'/esg'" (click)="setSelectedNav('esg')">
+                    <div>
+                        <img src="/assets/image/esg-icon.svg">
+                        <div class="nav-label">ESG </div>
+                    </div>
+                </a>
+            </div>
+            <div class="center-nav-list" [routerLinkActive]="['nav-selected']">
+                <a [routerLink]="'/data-warehouse'" (click)="setSelectedNav('data-warehouse')">
+                    <div>
+                        <img src="/assets/image/data-wh-icon.svg">
+                        <div class="nav-label"> Data WareHouse </div>
+                    </div>
+                </a>
+            </div>
+            <div class="center-nav-list" [routerLinkActive]="['nav-selected']">
+                <a [routerLink]="'/sustainability-standard-database'"
+                    (click)="setSelectedNav('sustainability-standard-database')">
+                    <div>
+                        <img src="/assets/image/ssd-icon.svg">
+                        <div class="nav-label"> Sustainability Standard Database </div>
+                    </div>
+                </a>
+            </div>
+            <div class="center-nav-list" [routerLinkActive]="['nav-selected']">
+                <a [routerLink]="'/e-waste'" (click)="setSelectedNav('e-waste')">
+                    <div>
+                        <img src="/assets/image/waste-icon.svg">
+                        <div class="nav-label">E-waste </div>
+                    </div>
+                </a>
+            </div>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="nav-container">
+        <div>
+
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+  
+</mat-sidenav-container>
+<footer id="footer">
+    <alert></alert>
+  </footer>

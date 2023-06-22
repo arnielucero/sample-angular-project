@@ -1,0 +1,40 @@
+.selectSourceObjectModalLabel {
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.selectSourceInput{
+    display: flex;
+    align-items: center;
+    width: 500px; 
+}
+
+.selectSourceInputLabel {
+    padding-left: 5%;
+    width: 40%;
+    font-size: medium;
+}
+
+.selectSourceInputDropdown {
+    padding-right: 5%;
+    width: 60%;
+}
+
+.selectSourceObjectInputLabel {
+    font-weight: 500;
+}
+
+.selectSourceButtonContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 375px;
+    
+}
+
+.selectSourceItemButton {
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 45%;
+}

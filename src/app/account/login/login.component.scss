@@ -1,0 +1,89 @@
+.main-div mat-card {
+    padding: 0px;
+}
+
+.login-form {
+    padding: 20px;
+}
+
+.signin-label {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+
+}
+
+.remember {
+    padding: 0px 0px 10px 0px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.login-sidebar {
+    width: 50%;
+}
+
+.forgot-password {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-text {
+    width: 95px;
+    height: 39px;
+    left: 317px;
+    top: 300px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.no-account {
+    display: flex;
+    justify-content: center;
+}
+
+.vpc-logo {
+    padding: 20px;
+    position: fixed
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.login-btn {
+    width: 58px;
+    height: 24px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Button/Primary/Text_Default */
+
+    color: #FFFFFF;
+}

@@ -1,0 +1,82 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="50">
+        <h1>{{title}}</h1>
+        <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="onSubmit()" fxLayout="column">
+            <mat-form-field appearance="outline">
+                <mat-label>Middleware</mat-label>
+                <input matInput formControlName="middleware">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Account Name</mat-label>
+                <input matInput formControlName="accountName"  id="accountName" name="accountName">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Account Details</mat-label>
+                <textarea matInput formControlName="accountDetails"  name="accountDetails" rows="3" ></textarea>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>System Type</mat-label>
+                <mat-select formControlName="systemType">
+                    <mat-option *ngFor="let option of systemType" [value]="option.value">
+                      {{ option.label }}
+                    </mat-option>
+                </mat-select>    
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Connection Type</mat-label>
+                <mat-select formControlName="connectionType">
+                    <mat-option *ngFor="let option of connectionType" [value]="option.value">
+                      {{ option.label }}
+                    </mat-option>
+                </mat-select>    
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Protocol</mat-label>
+                <input matInput formControlName="protocol">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Host Name</mat-label>
+                <input matInput formControlName="hostName">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Port</mat-label>
+                <input matInput formControlName="port">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Schema Specific</mat-label>
+                <input matInput formControlName="schemaSpecific">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Connection String</mat-label>
+                <input matInput formControlName="connectionString">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Certificate</mat-label>
+                <input matInput formControlName="certificate">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Private Key</mat-label>
+                <input matInput formControlName="privateKey">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Secure Tunnel</mat-label>
+                <input matInput formControlName="secureTunnel">
+            </mat-form-field>
+            <div class="action-btn">
+                <button  mat-raised-button color="primary" id="save-btn" [routerLink]="['/data-warehouse/system-integration']">
+                    Cancel
+                </button>
+                <button  mat-raised-button color="primary" id="save-btn"  (click)="testConnection()">
+                    Test
+                </button>
+                <button type="submit" mat-raised-button color="primary" [disabled]="submitting" id="save-btn">  
+                    <span *ngIf="submitting" class="spinner-border spinner-border-sm me-1"></span>
+                    Save
+                </button>
+            </div>
+        </form>
+    </mat-card>
+</div>
+<div *ngIf="loading" class="text-center m-5">
+    <span class="spinner-border spinner-border-lg align-center"></span>
+</div>

@@ -1,0 +1,43 @@
+<mat-sidenav-container class="no-scroll">
+    <mat-sidenav mode="side" opened class="login-sidebar">
+        <img src="assets/image/vpc.svg" class="vpc-logo">
+        <div fxLayoutAlign="center center" fxFlexFill class="main-div">
+            <mat-card fxFlex="50">
+                <mat-toolbar class="signin-label">
+                    <H1 class="login-text">Login</H1>
+                </mat-toolbar>
+                <form [formGroup]="signin" fxLayoutAlign="strecth" fxLayout="column" class="login-form"
+                    (submit)="login()">
+                    <mat-form-field>
+                        <mat-label>Username</mat-label>
+                        <input matInput formControlName="username" placeholder="Enter your ID or email address">
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                        <mat-icon matSuffix (click)="hide = !hide" svgIcon="visible_off" *ngIf="hide"></mat-icon>
+                        <mat-icon matSuffix (click)="hide = !hide" *ngIf="!hide">visibility</mat-icon>
+                    </mat-form-field>
+
+                    <div class="mb20">
+                        <a class="forgot-password" href="account/forgotPassword">Forgot Password</a>
+                    </div>
+                    <button type="submit" mat-raised-button color="primary"> Log in
+                        <img src="assets/image/arrow-fw.svg" width="16">
+                    </button>
+                    <span class="mb20"></span>
+                    <div class="no-account"> Don't have an account? <a href="account/signUp"> Sign Up?</a>
+                    </div>
+
+                </form>
+            </mat-card>
+        </div>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 85vh; overflow: hidden;">
+            <H1></H1>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

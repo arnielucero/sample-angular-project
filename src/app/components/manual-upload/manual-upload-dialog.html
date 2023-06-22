@@ -1,0 +1,36 @@
+
+<mat-dialog-content class="dialogContainer">
+<mat-grid-list cols="12" rowHeight="85px" class="gridContainer">
+    <mat-grid-tile
+        [colspan]="12"
+        [rowspan]="1">
+        <h1 class="selectSourceObjectModalLabel" mat-dialog-title>Upload a File</h1>
+    </mat-grid-tile>
+    <mat-grid-tile
+        [colspan]="5"
+        [rowspan]="2"
+        class="selectFileLabelContainer">
+        <div class="selectFileLabel">
+            <h3 class="selectFileLabelText" mat-dialog-title>Select a file:</h3>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile
+        [colspan]="7"
+        [rowspan]="2"
+        class="selectSourceInputContainer">
+        <div class="selectSourceInputSubContainer">
+            <div class="uploadFileInputContainer">
+                <input #csvInput hidden="true" type="file" onclick="this.value=null" accept=".csv"/>
+                <button class="uploadFileInputContainerButton primaryButton" mat-raised-button color="primary" (click)="csvInput.click()">Choose File</button>
+                <div class="uploadFileInputFileName">
+
+                </div>
+            </div>
+            <div class="uploadFileButtonContainer">
+                <button class="selectSourceItemButton primaryButton" mat-raised-button color="primary">Upload File</button>
+            </div>
+            
+        </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-dialog-content>

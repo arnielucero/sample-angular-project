@@ -1,0 +1,149 @@
+$nav-width: 98px;
+
+.toolbar-fixed {
+    position: relative;
+    left: $nav-width;
+    width: calc(100vw - $nav-width);
+    text-align: center;
+    background-color: #283882;
+    color: #fff;
+
+}
+
+.sidebar-fixed {
+    width: $nav-width;
+    position: fixed;
+    top: 0;
+}
+
+.mat-sidenav-content,
+.mat-sidenav-container,
+.mat-drawer-content {
+    transform: none !important;
+
+}
+
+.circles {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #eee;
+    color: black;
+    border: 2px solid #fff;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar-icon {
+    padding: 0 16px;
+}
+
+.mat-list-item {
+    height: auto !important;
+    margin-top: 10px;
+}
+
+.nav-label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #233888;
+
+}
+
+.image-logo {
+    position: relative;
+    left: 19.19%;
+    top: 1.63%;
+    bottom: 93.12%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.full-name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    padding: 0 10px;
+}
+
+.center-nav-list {
+    margin-top: 10px;
+    text-align: center;
+    margin: 10px 5px;
+    padding: 3px;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+    padding: 0;
+}
+
+.nav-selected {
+    background-color: #233888;
+    border-radius: 10px;
+
+    .nav-label {
+        color: #fff;
+    }
+
+    img {
+        filter: brightness(0) invert(1);
+    }
+
+}
+
+.menu-content {
+    display: contents;
+
+    a {
+
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.mat-tab-label,
+.mat-tab-link {
+    color: #fff;
+    opacity: 1;
+    min-width: 100px;
+
+}
+
+.mat-tab-link {
+    height: 64px;
+    padding: 0 10px
+}
+
+.nav-container {
+    width: 100vw;
+}
+
+.tab-selected {
+    color: #283882;
+    background-color: #FFFFFF;
+
+}
+
+.ml25 {
+    margin-left: 25px;
+}
+
+.mat-menu-panel {
+    background-color: #233888;
+    color: #fff;
+}
+
+#footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+
+}

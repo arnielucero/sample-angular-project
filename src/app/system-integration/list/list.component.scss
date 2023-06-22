@@ -1,0 +1,44 @@
+.system-integration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5pc;
+    flex-grow: 1;
+    padding: 20px;
+    height: 100%;
+}    
+
+table {
+    width: 60%;
+}
+th {
+  background-color: #283882;
+  color: #fff; 
+  font-size: medium;
+}
+
+.system-status {
+    display: flex; 
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.add-new {
+    margin-top: 2pc;    
+}
+
+a:hover {
+    cursor: pointer;
+    color: #000;
+}
+a {
+    color: #000;
+}
+
+.action-link {
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+}

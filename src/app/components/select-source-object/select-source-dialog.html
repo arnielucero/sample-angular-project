@@ -1,0 +1,31 @@
+<mat-dialog-content class="dialogContainer">
+<mat-grid-list cols="5" rowHeight="85px" class="gridContainer">
+    <mat-grid-tile
+        [colspan]="5"
+        [rowspan]="1">
+        <h1 class="selectSourceObjectModalLabel" mat-dialog-title>Select Source Object</h1>
+    </mat-grid-tile>
+    <mat-grid-tile
+        [colspan]="5"
+        [rowspan]="1">
+        <div class="selectSourceInput">
+            <h2 class="selectSourceInputLabel" mat-dialog-title>Select Source Object:</h2>
+            <mat-form-field class="selectSourceInputDropdown" appearance="outline">
+                <mat-select disableRipple>
+                    <mat-option value="1">Option 1</mat-option>
+                    <mat-option value="2">Option 2</mat-option>
+                    <mat-option value="3">Option 3</mat-option>
+                </mat-select>
+                </mat-form-field>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile
+        [colspan]="5"
+        [rowspan]="1">
+        <div class="selectSourceButtonContainer">
+            <button class="selectSourceItemButton primaryButton" mat-raised-button color="primary">Cancel</button>
+            <button class="selectSourceItemButton primaryButton" mat-raised-button color="primary">Extract Data</button>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+</mat-dialog-content>

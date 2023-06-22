@@ -1,0 +1,65 @@
+.dataCaptureContainer {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+
+.dataCaptureTopRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 1200px;
+}
+
+.dataCaptureTableRow {
+    width: 70%;
+}
+
+.dataCaptureDropdownContainer {
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: yellowgreen;
+}
+
+.dataCaptureTopRowLabelContainer {
+    height: 100%; display: flex; justify-content: center; align-items: center; margin-top: 12px;
+}
+
+.dataCaptureTopRowLabel {
+    font-size: medium; font-weight: 400; color: #283882;
+}
+
+.dropDownContainer {
+    height: 100%; justify-content: center; align-items: center; width: 250px; margin-bottom: 10px;
+}
+
+.dropDown {
+    justify-content: center; align-items: center; height: 50px; width: 100%;text-align: center;
+}
+
+.dropDownItem {
+    text-align: center;
+}
+
+th {
+    font-size: medium; background-color: #dfdede; color: #283882;
+}
+
+td {
+    font-size: 15px; background-color: #f6f6f6; color: #283882;
+}
+
+.ng-select .ng-select-container:after {
+    border-bottom: none;
+}
+
+// .mat-form-field-appearance-outline .mat-form-field-outline {
+//     background-color: #dfdede !important;
+// }
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+    background-color: #dfdede !important;
+}

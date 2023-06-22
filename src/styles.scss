@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@use '../node_modules/@angular/material' as mat;
+html, body { margin: 0; }
+
+@font-face
+{
+    font-family: "Inter";
+    src: url("assets/font/inter/Inter-Regular.ttf")
+}
+
+$custom-typography: mat.define-typography-config(
+    $font-family: "Inter");
+@include mat.core($custom-typography);
+
+.dialogContainer {
+    width: 600px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.gridContainer {
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.primaryButton {
+    width: 180px;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 50px;
+    border-radius: 0px !important;
+    background-color: #283882 !important;
+}
+
+td, th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.mat-sort-header-container {
+    justify-content: center !important;
+}
